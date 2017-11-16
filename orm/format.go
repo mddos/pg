@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/go-pg/pg/internal/parser"
-	"github.com/go-pg/pg/types"
+	"github.com/mddos/pg/internal/parser"
+	"github.com/mddos/pg/types"
 )
 
 var formatter Formatter

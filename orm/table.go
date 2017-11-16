@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-pg/pg/internal"
-	"github.com/go-pg/pg/types"
+	"github.com/mddos/pg/internal"
+	"github.com/mddos/pg/types"
 )
 
 var timeType = reflect.TypeOf((*time.Time)(nil)).Elem()

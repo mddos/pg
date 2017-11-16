@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/mddos/pg/internal"
 )
 
 // Placeholder that is replaced with count(*).

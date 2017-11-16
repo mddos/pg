@@ -3,7 +3,7 @@ package orm
 import (
 	"fmt"
 
-	"github.com/go-pg/pg/types"
+	"github.com/mddos/pg/types"
 )
 
 type valuesModel struct {

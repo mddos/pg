@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-pg/pg/internal"
-	"github.com/go-pg/pg/internal/pool"
-	"github.com/go-pg/pg/orm"
+	"github.com/mddos/pg/internal"
+	"github.com/mddos/pg/internal/pool"
+	"github.com/mddos/pg/orm"
 )
 
 var errStmtClosed = errors.New("pg: statement is closed")

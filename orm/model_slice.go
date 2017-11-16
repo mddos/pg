@@ -3,7 +3,7 @@ package orm
 import (
 	"reflect"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/mddos/pg/internal"
 )
 
 type sliceModel struct {

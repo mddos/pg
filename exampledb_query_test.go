@@ -3,7 +3,7 @@ package pg_test
 import (
 	"fmt"
 
-	"github.com/go-pg/pg"
+	"github.com/mddos/pg"
 )
 
 func CreateUser(db *pg.DB, user *User) error {

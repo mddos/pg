@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/mddos/pg/internal"
 )
 
 var ErrClosed = errors.New("pg: database is closed")

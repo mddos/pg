@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/mddos/pg/internal"
 )
 
 var scannerType = reflect.TypeOf((*sql.Scanner)(nil)).Elem()

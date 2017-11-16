@@ -4,7 +4,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/mddos/pg/internal"
 )
 
 var ErrNoRows = internal.ErrNoRows

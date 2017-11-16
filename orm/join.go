@@ -1,8 +1,8 @@
 package orm
 
 import (
-	"github.com/go-pg/pg/internal"
-	"github.com/go-pg/pg/types"
+	"github.com/mddos/pg/internal"
+	"github.com/mddos/pg/types"
 )
 
 type join struct {

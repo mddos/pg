@@ -4,7 +4,7 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/go-pg/pg/orm"
+	"github.com/mddos/pg/orm"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

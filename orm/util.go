@@ -3,7 +3,7 @@ package orm
 import (
 	"reflect"
 
-	"github.com/go-pg/pg/types"
+	"github.com/mddos/pg/types"
 )
 
 func indirectType(t reflect.Type) reflect.Type {

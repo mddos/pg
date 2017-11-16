@@ -4,7 +4,7 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/go-pg/pg/internal"
+	"github.com/mddos/pg/internal"
 )
 
 func Update(db DB, model ...interface{}) error {

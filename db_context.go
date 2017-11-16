@@ -5,8 +5,8 @@ package pg
 import (
 	"context"
 
-	"github.com/go-pg/pg/internal/pool"
-	"github.com/go-pg/pg/orm"
+	"github.com/mddos/pg/internal/pool"
+	"github.com/mddos/pg/orm"
 )
 
 // DB is a database handle representing a pool of zero or more

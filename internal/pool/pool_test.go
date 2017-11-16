@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/go-pg/pg/internal/pool"
+	"github.com/mddos/pg/internal/pool"
 )
 
 var _ = Describe("ConnPool", func() {
