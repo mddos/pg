@@ -483,12 +483,12 @@ func sqlType(typ reflect.Type) string {
 	case reflect.String:
 		return "text"
 	case reflect.Map, reflect.Struct:
-		return "jsonb"
+		return "bytes"
 	case reflect.Array, reflect.Slice:
 		if typ.Elem().Kind() == reflect.Uint8 {
-			return "bytea"
+			return "bytes"
 		}
-		return "jsonb"
+		return "bytes"
 	default:
 		return typ.Kind().String()
 	}

@@ -560,7 +560,7 @@ var _ = Describe("DB.Select", func() {
 		db = pg.Connect(pgOptions())
 
 		qs := []string{
-			`CREATE TEMP TABLE tests (col bytea)`,
+			`CREATE TEMP TABLE tests (col bytes)`,
 			fmt.Sprintf(`INSERT INTO tests VALUES ('\x%x')`, []byte("bytes")),
 		}
 		for _, q := range qs {
@@ -574,7 +574,7 @@ var _ = Describe("DB.Select", func() {
 		Expect(err).NotTo(HaveOccurred())
 	})
 
-	It("selects bytea", func() {
+	It("selects bytes", func() {
 		var col []byte
 		err := db.Model().Table("tests").Column("col").Select(pg.Scan(&col))
 		Expect(err).NotTo(HaveOccurred())

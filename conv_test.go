@@ -180,10 +180,10 @@ func conversionTests() []conversionTest {
 		{src: "hello world", dst: new(*string), pgtype: "text"},
 		{src: "'\"\000", dst: new(string), wanted: `'"`, pgtype: "text"},
 
-		{src: nil, dst: []byte(nil), pgtype: "bytea", wanterr: "pg: Scan(non-pointer []uint8)"},
-		{src: nil, dst: new([]byte), pgtype: "bytea", wantnil: true},
-		{src: []byte("hello world\000"), dst: new([]byte), pgtype: "bytea"},
-		{src: []byte{}, dst: new([]byte), pgtype: "bytea", wantzero: true},
+		{src: nil, dst: []byte(nil), pgtype: "bytes", wanterr: "pg: Scan(non-pointer []uint8)"},
+		{src: nil, dst: new([]byte), pgtype: "bytes", wantnil: true},
+		{src: []byte("hello world\000"), dst: new([]byte), pgtype: "bytes"},
+		{src: []byte{}, dst: new([]byte), pgtype: "bytes", wantzero: true},
 
 		{src: nil, dst: int8(0), pgtype: "smallint", wanterr: "pg: Scan(non-pointer int8)"},
 		{src: nil, dst: new(int8), pgtype: "smallint", wantzero: true},
@@ -254,12 +254,12 @@ func conversionTests() []conversionTest {
 		{src: float64(math.MaxFloat64), dst: new(*float64), pgtype: "decimal"},
 		{src: float64(math.SmallestNonzeroFloat64), dst: new(float64), pgtype: "decimal"},
 
-		{src: nil, dst: []int(nil), pgtype: "jsonb", wanterr: "pg: Scan(non-pointer []int)"},
-		{src: nil, dst: new([]int), pgtype: "jsonb", wantnil: true},
-		{src: []int(nil), dst: new([]int), pgtype: "jsonb", wantnil: true},
-		{src: []int{}, dst: new([]int), pgtype: "jsonb", wantzero: true},
-		{src: []int{1, 2, 3}, dst: new([]int), pgtype: "jsonb"},
-		{src: IntSlice{1, 2, 3}, dst: new(IntSlice), pgtype: "jsonb"},
+		{src: nil, dst: []int(nil), pgtype: "bytes", wanterr: "pg: Scan(non-pointer []int)"},
+		{src: nil, dst: new([]int), pgtype: "bytes", wantnil: true},
+		{src: []int(nil), dst: new([]int), pgtype: "bytes", wantnil: true},
+		{src: []int{}, dst: new([]int), pgtype: "bytes", wantzero: true},
+		{src: []int{1, 2, 3}, dst: new([]int), pgtype: "bytes"},
+		{src: IntSlice{1, 2, 3}, dst: new(IntSlice), pgtype: "bytes"},
 
 		{src: nil, dst: pg.Array([]int(nil)), pgtype: "int[]", wanterr: "pg: Scan(non-pointer []int)"},
 		{src: pg.Array([]int(nil)), dst: pg.Array(new([]int)), pgtype: "int[]", wantnil: true},
